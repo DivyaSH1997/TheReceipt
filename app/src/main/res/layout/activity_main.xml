@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:id="@+id/title"
+        android:text="The Menu Counter"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="60px"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="150px"
+        android:id="@+id/radioVeg"
+        android:layout_marginLeft="100px"
+        android:text="Veg."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="150px"
+            android:id="@+id/radioNonVeg"
+            android:text="Non Veg."
+            android:layout_marginLeft="100px"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:id="@+id/txtmessage"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="60px"
+        android:textAlignment="center"
+        android:text="Selcted Items"
+        android:layout_marginTop="100px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        android:visibility="invisible"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkboxcontainer"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="50px"
+        tools:ignore="MissingConstraints"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtmessage">
+
+        <CheckBox
+            android:layout_width="600px"
+            android:layout_height="150px"
+            android:id="@+id/chk1"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox
+            android:layout_width="600px"
+            android:layout_height="150px"
+            android:id="@+id/chk2"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox
+            android:layout_width="600px"
+            android:layout_height="150px"
+            android:id="@+id/chk3"
+            android:onClick="onCheckboxClicked"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="400px"
+        android:layout_height="150px"
+        android:layout_marginLeft="128dp"
+        android:gravity="center"
+        android:id="@+id/btntotal"
+        android:text="Total"
+        android:layout_marginTop="100px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chkboxcontainer" />
+    <Button
+        android:layout_width="400px"
+        android:layout_height="150px"
+        android:layout_marginLeft="128dp"
+        android:gravity="center"
+        android:id="@+id/btnreset"
+        android:text="Reset"
+        android:layout_marginTop="100px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btntotal" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
